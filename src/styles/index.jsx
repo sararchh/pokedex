@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from "styled-media-query";
 
 export const Container = styled.div`
   padding: 1rem;
@@ -9,6 +10,11 @@ export const Container = styled.div`
 
   h3 {
     color: #090707ef;
+
+    ${media.lessThan('small')`
+    font-size: 1rem;
+    `};
+
   }
 `;
 
@@ -16,6 +22,12 @@ export const Title = styled.h1`
   font-size: 3rem;
   color: #151010d8;
   margin: 2rem;
+
+  ${media.lessThan('small')`
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  `};
+ 
 `;
 
 export const Button = styled.button`
@@ -28,6 +40,13 @@ export const Button = styled.button`
   font-weight: bold;
   font-size: 1rem;
   margin-top: 1.5rem;
+
+  ${media.lessThan('small')`
+  width: 5rem;
+  height: 2rem;
+  margin-top: 1.5rem;
+  `};
+  
   `;
 
 export const InputValue = styled.input`
@@ -37,6 +56,13 @@ export const InputValue = styled.input`
   border: none;
   font-size: 1rem;
   padding: 1rem;
+
+  ${media.lessThan('small')`
+  width: 15rem;
+  height: 1.5rem;
+  margin-top: 1.5rem;
+  `};
+
   `;
 
 export const Card = styled.div`
@@ -50,10 +76,20 @@ export const Card = styled.div`
   flex-direction: column;
   border-radius: 0.3rem;
   box-shadow: 0px 0px 9px 3px rgba(0,0,0,0.50);
+
+  ${media.lessThan('small')`
+  width: 18rem;
+  height: 20rem;
+  `};
   
   h1{
     text-transform: capitalize;
     text-align: center;
+
+  ${media.lessThan('small')`
+    font-size: 1.5rem;  
+  `};
+
   }
   
   img{
@@ -68,4 +104,13 @@ export const CartData = styled.div`
     justify-content:space-evenly ;
     width: 30rem;
     height: 5rem;
+
+    ${media.lessThan('small')`
+    font-size: 0.8rem; 
+    display: flex;
+    justify-content:space-evenly; ;
+    width: 15rem;
+    height: 5rem;
+    `};
+
   `;
